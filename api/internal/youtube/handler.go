@@ -24,7 +24,6 @@ func DownloadHandler(w http.ResponseWriter, r *http.Request) {
         return
     }
 
-    // download directly to MP3
     mp3File, err := DownloadAndConvertMP3(url, "output")
     if err != nil {
         w.WriteHeader(http.StatusInternalServerError)
@@ -40,5 +39,5 @@ func DownloadHandler(w http.ResponseWriter, r *http.Request) {
         MP3File: mp3File,
     })
 
-    fmt.Println("Downloaded MP3:", mp3File)
+    fmt.Println("Downloaded MP3 with cover:", mp3File)
 }

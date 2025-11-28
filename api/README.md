@@ -23,4 +23,5 @@ rm -rf output
 mkdir output
 
 
+curl "http://localhost:8080/health"
 curl "http://localhost:8080/download?url=https://youtu.be/z1HUvadz_ZY?list=LL"

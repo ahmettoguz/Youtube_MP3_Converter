@@ -24,7 +24,7 @@ func DownloadHandler(w http.ResponseWriter, r *http.Request) {
         return
     }
 
-    mp3File, err := DownloadAndConvertMP3(url, "output")
+    mp3File, err := DownloadAndConvertMP3(url, "mp3")
     if err != nil {
         w.WriteHeader(http.StatusInternalServerError)
         json.NewEncoder(w).Encode(DownloadResponse{

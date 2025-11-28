@@ -1,0 +1,11 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: youtube-api
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./output:/app/output
+    restart: no
